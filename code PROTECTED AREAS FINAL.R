@@ -8,15 +8,20 @@
 ### Section 1: Species-specific models of population metric ~ cover_of_protected area
 ###           (a) standard models
 ###           (b) matched models
-###           This section demonstrates the methods used but can't run without raw data 
+###           This section demonstrates the methods used but can't run without raw data
+###           Raw data is available on request from BTO
 ###           
 ### Section 2: Simple summaries
 ###           (a) numbers of species with positive and negative responses to PAs
 ###           (b) mean responses across all species
+###           This section can be run using the file 'Suppl File 1.xlsx'
+###           from: https://doi.org/10.6084/m9.figshare.20200895 
 ###
 ### Section 3: Traits analysis
 ###           (a) Response to PA ~ conservation status
 ###           (b) Response to PA ~ ecological traits
+###           This section can be run using the file 'Suppl File 1.xlsx'
+###           from: https://doi.org/10.6084/m9.figshare.20200895 
 #############################################################################
 
 library(readxl)
