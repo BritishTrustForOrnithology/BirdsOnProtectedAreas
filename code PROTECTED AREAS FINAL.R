@@ -521,12 +521,12 @@ points(coeffs[,5]~c(c(1:12)+spacing*4),cex=1.2,pch=24,col=1, bg="white")
 ################################################################################################################
 #Figure 2
 #Plot PA extent coefficients from productivity models against those from abundance/occupancy/colonisation/persistence models
-PA_coeffs_df_1km<-read.csv("PA_coeffs_df_1km.csv")
+PA_coeffs_df_1km<-read.csv("PA_coeffs_df_1km.csv") # this file is saved in the BirdsOnProtectedAreas repository
 
-parmests_BBS<-read.csv("parmests with popdens - BBS.csv")
-parmests_occ<-read.csv("parmests with popdens - Occupancy.csv")
-parmests_col<-read.csv("parmests with popdens - Colonisation.csv")
-parmests_per<-read.csv("parmests with popdens - Persistence.csv")
+parmests_BBS<-data.frame(read_xlsx("Suppl File 1.xlsx",sheet="BBS")) 
+parmests_occ<-data.frame(read_xlsx("Suppl File 1.xlsx",sheet="Occupancy")) 
+parmests_col<-data.frame(read_xlsx("Suppl File 1.xlsx",sheet="Colonisation"))
+parmests_per<-data.frame(read_xlsx("Suppl File 1.xlsx",sheet="Persistence"))
 
 PA_coeffs_df_1km$BBS_code<-character(nrow(PA_coeffs_df_1km))
 PA_coeffs_df_1km$BBS_SPA<-PA_coeffs_df_1km$BBS_SPA_se<-
