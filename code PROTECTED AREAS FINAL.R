@@ -270,8 +270,7 @@ lines(c(0,6),c(0,0),lty=2)
 # (popsizepredict=="yes", Table S6)
 popsizepredict<-"yes"
 
-# CHANGE THIS WHEN TRAITS ADDED TO FIGSHARE
-traits_all<-read.csv("Analysis/Final_traits.csv")
+traits_all<-read_xlsx("Suppl File 1.xlsx",sheet="Traits")
 row_name<-c("BoCC_Green","BoCC_Amber","BoCC_Red","a1no","a1yes","s1no","s1yes")
 
 # Choose which population measure to summarise:
@@ -375,10 +374,12 @@ rm(logpsize)
 #tree2<-read.tree("Analysis/EricsonStage1_myTips_hooded.tre", keep.multi=TRUE) 
 #avtree <- averageTree(tree2,method="symmetric.difference")
 #write.tree(avtree,"Analysis/myaveragedtree.tre")
-avtree<-read.tree("Analysis/myaveragedtree.tre", keep.multi=TRUE)
+#avtree<-read.tree("Analysis/myaveragedtree.tre", keep.multi=TRUE)
 
-traits_all<-read.csv("Analysis/Final_traits.csv") # This is the traits file copied from google drive
+# Get the average tree saved in the BirdsOnProtectedAreas repository:
+avtree<-read.tree("https://github.com/BritishTrustForOrnithology/BirdsOnProtectedAreas/edit/main/myaveragedtree.tre", keep.multi=TRUE)
 
+traits_all<-read_xlsx("Suppl File 1.xlsx",sheet="Traits")
 ##################################################
 
 # this sets up the results tables for number to be put in later on
